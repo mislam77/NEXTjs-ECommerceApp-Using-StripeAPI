@@ -1,7 +1,6 @@
 import type { GetServerSideProps, NextPage } from 'next'
 import Stripe from 'stripe';
 import ProductCard from "../components/card";
-import CartContext from "../components/context";
 import Header from "../components/header";
 
 export const getServerSideProps: GetServerSideProps = async (context) => {
@@ -36,7 +35,7 @@ const Home: NextPage<Props> = ({ prices }) => {
             <div className="max-w-5xl mx-auto py-8">
                 <div className="flex items-center justify-between border-b pb-3">
                     <h1 className="font-semibold tracking-wide leading-10 text-xl lg:text-3xl">
-                        Shop Now
+                        Gadgets!
                     </h1>
                 </div>
 

@@ -1,9 +1,8 @@
 import { FunctionComponent, useContext } from "react";
 import { Fragment } from 'react'
-import { SearchIcon, ShoppingBagIcon } from '@heroicons/react/outline'
+import { ShoppingBagIcon } from '@heroicons/react/outline'
 import { Popover, Transition } from '@headlessui/react'
 import CartContext from "./context";
-import { Stripe } from "stripe";
 import { getPriceTotal, getProductDescription, getProductImage, getProductName } from "../computed";
 
 const Header: FunctionComponent = () => {
@@ -39,7 +38,7 @@ const Header: FunctionComponent = () => {
                     <div className="h-16 flex items-center justify-between">
                         <div className="flex-1 flex">
                             <a href="#">
-                                Shopping
+                                CoolTek
                             </a>
                         </div>
 

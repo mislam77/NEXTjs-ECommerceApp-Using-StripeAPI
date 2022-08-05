@@ -45,7 +45,7 @@ const ProductCard: FunctionComponent<CardProps> = ({ price }) => {
                         onClick={() => addToCart(price)}
                         className="relative w-full flex bg-gray-200 border border-transparent rounded-md py-2 px-8 items-center justify-center text-sm font-medium text-gray-900 hover:bg-gray-200"
                     >
-                        Add to bag<span className="sr-only">, {getProductName(price.product)}</span>
+                        Add to Cart<span className="sr-only">, {getProductName(price.product)}</span>
                     </button>
                 </div>
             </div>

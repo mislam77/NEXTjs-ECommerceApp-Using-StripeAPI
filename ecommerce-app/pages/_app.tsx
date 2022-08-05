@@ -1,7 +1,7 @@
 import '../styles/globals.css'
 import type { AppProps } from 'next/app'
 import CartContext, { CartContextProps } from "../components/context";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import _ from "lodash";
 import { Stripe } from "stripe";
 
