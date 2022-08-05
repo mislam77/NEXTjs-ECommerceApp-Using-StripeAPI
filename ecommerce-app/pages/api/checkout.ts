@@ -39,7 +39,6 @@ export default async function handler(
 
         res.status(201).json({ session })
     } catch (e) {
-        // @ts-ignore
         res.status(500).json({ message: e.message })
     }
 

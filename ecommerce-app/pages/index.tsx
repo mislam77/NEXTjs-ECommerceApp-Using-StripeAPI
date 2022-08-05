@@ -1,6 +1,5 @@
 import type { GetServerSideProps, NextPage } from 'next'
 import Stripe from 'stripe';
-import type { NextPage } from 'next'
 import ProductCard from "../components/card";
 import CartContext from "../components/context";
 import Header from "../components/header";
