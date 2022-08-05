@@ -2,6 +2,8 @@ import type { GetServerSideProps, NextPage } from 'next'
 import Stripe from 'stripe';
 import type { NextPage } from 'next'
 import ProductCard from "../components/card";
+import CartContext from "../components/context";
+import Header from "../components/header";
 
 export const getServerSideProps: GetServerSideProps = async (context) => {
     const stripe = new Stripe('sk_test_51LTWlfGHUwCG1oUwLrUSeP0u4WpYYKBMzLJqbPQydIGOMo9Ag7paQL4Tqm1j9nFAKxoHsKJtUFDM8evi3AbgxFzY00DjMOM3Kt' ?? '', {
@@ -31,7 +33,7 @@ type Props = {
 const Home: NextPage<Props> = ({ prices }) => {
     return (
         <main className="bg-gray-100 min-h-screen">
-
+            <Header/>
             <div className="max-w-5xl mx-auto py-8">
                 <div className="flex items-center justify-between border-b pb-3">
                     <h1 className="font-semibold tracking-wide leading-10 text-xl lg:text-3xl">
