@@ -1,7 +1,30 @@
+import type { GetServerSideProps, NextPage } from 'next'
+import Stripe from 'stripe';
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
+
+export const getServerSideProps: GetServerSideProps = async (context) => {
+    const stripe = new Stripe('sk_test_51LTWlfGHUwCG1oUwLrUSeP0u4WpYYKBMzLJqbPQydIGOMo9Ag7paQL4Tqm1j9nFAKxoHsKJtUFDM8evi3AbgxFzY00DjMOM3Kt' ?? '', {
+        apiVersion: '2022-08-01',
+    });
+
+    const res = await stripe.prices.list({
+        limit: 10,
+        expand: ['data.product']
+    });
+
+    const prices = res.data.filter(price => {
+        return price.active;
+    })
+
+    return {
+        props: {
+            prices
+        },
+    }
+}
 
 const Home: NextPage = () => {
   return (
